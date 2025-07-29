@@ -1,0 +1,9 @@
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/DemoApplication.java
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/controllers/DatosPersonalesController.java
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/controllers/UsersController.java
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/models/DatosPersonales.java
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/models/Users.java
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/repositories/DatosPersonalesRepository.java
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/repositories/UsersRepository.java
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/services/DatosPersonalesService.java
+/Users/carlosvelez/Desktop/demo/src/main/java/com/example/demo/services/UsersService.java
