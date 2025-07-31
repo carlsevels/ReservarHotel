@@ -1,5 +1,8 @@
 package com.example.demo.repositories;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class HotelesRepository {
+import com.example.demo.models.Hoteles;
+
+public interface HotelesRepository extends JpaRepository<Hoteles, Long> {
     
 }
