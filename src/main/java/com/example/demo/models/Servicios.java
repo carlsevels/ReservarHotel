@@ -1,5 +1,7 @@
 package com.example.demo.models;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
@@ -22,6 +24,10 @@ public class Servicios {
     @JoinColumn(name = "hotelId")
     @JsonManagedReference
     private Hoteles hotel;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "servicios")
+    @JsonManagedReference
+    private List<Descripciones> descripcion;
 
     // TODO: Agrega campos aquí
 

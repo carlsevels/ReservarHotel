@@ -33,7 +33,7 @@ public class Users {
     }
 
     public void setEmail(String emailString) {
-        this.email = emailString;
+        emailString = email;
     }
 
     public String getPassword() {
@@ -41,7 +41,7 @@ public class Users {
     }
 
     public void setPassword(String passwordString) {
-        this.password = passwordString;
+        passwordString = password;
     }
 
     public DatosPersonales getDatosPersonales() {

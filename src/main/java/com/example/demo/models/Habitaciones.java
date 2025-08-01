@@ -22,6 +22,10 @@ public class Habitaciones {
     @JoinColumn(name = "hotelId")
     private Hoteles hotel;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "habitacion")
+    @JsonManagedReference
+    private List<Galeria> galeria;
+
     // TODO: Agrega campos aquí
 
     public Habitaciones() {
