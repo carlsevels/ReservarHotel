@@ -13,7 +13,7 @@ public class Users {
     private String email;
     private String password;
 
-    @OneToOne(mappedBy = "users", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference
     private DatosPersonales datosPersonales;
 

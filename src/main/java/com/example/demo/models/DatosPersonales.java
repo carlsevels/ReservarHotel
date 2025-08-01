@@ -25,7 +25,7 @@ public class DatosPersonales {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "userId", referencedColumnName = "id")
     @JsonBackReference
-    private Users users;
+    private Users user;
 
     public DatosPersonales() {
     }
@@ -63,10 +63,10 @@ public class DatosPersonales {
     }
 
     public Users getUsers() {
-        return users;
+        return user;
     }
 
-    public void setUsers(Users users) {
-        this.users = users;
+    public void setUsers(Users user) {
+        this.user = user;
     }
 }

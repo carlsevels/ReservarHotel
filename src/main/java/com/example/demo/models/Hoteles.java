@@ -20,6 +20,15 @@ public class Hoteles {
     @JsonManagedReference
     private List<Idiomas> idiomas;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
+    @JsonManagedReference
+    private List<Servicios> servicios;
+
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
+    @JsonManagedReference
+    private List<Habitaciones> habitaciones;
+
     public Hoteles() {}
 
     public Long getId(){
