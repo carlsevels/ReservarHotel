@@ -27,6 +27,39 @@ public class ${CAP_NAME} {
     // TODO: Agrega campos aquí
 
     public ${CAP_NAME}() {}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    // TODO: Agrega getters y setters para otros campos
+}
+EOL
+
+# Crear DTO
+cat > $BASE_DIR/dto/${CAP_NAME}DTO.java <<EOL
+package com.example.demo.DTO;
+
+public class ${CAP_NAME}DTO {
+    private Long id;
+
+    // TODO: Agrega campos aquí
+
+    public ${CAP_NAME}DTO() {}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    // TODO: Agrega getters y setters para otros campos
 }
 EOL
 
@@ -91,4 +124,4 @@ public class ${CAP_NAME}Controller {
 }
 EOL
 
-echo "✅ Clases para '${CAP_NAME}' creadas exitosamente."
+echo "✅ Clases para '${CAP_NAME}' creadas exitosamente (modelo, DTO, repositorio, servicio, controlador)."

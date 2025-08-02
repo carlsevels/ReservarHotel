@@ -22,10 +22,12 @@ public class Users {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     @JsonManagedReference
+    @JsonBackReference
     private List<Calificaciones> calificaciones;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     @JsonManagedReference
+    @JsonBackReference
     private List<Reservaciones> reservaciones;
 
     public Users() {
@@ -43,16 +45,16 @@ public class Users {
         return email;
     }
 
-    public void setEmail(String emailString) {
-        emailString = email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String passwordString) {
-        passwordString = password;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public DatosPersonales getDatosPersonales() {
