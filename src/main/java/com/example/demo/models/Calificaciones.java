@@ -3,6 +3,7 @@ package com.example.demo.models;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
 
@@ -13,9 +14,14 @@ public class Calificaciones {
     private Long id;
     private Double calificacion;
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "calificaciones")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private Hoteles hotel;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "userId")
     @JsonBackReference
-    private List<Users> users;
+    private Users user;
 
     // TODO: Agrega campos aquí
 

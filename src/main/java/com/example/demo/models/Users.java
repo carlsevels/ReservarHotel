@@ -20,11 +20,7 @@ public class Users {
     @JsonManagedReference
     private DatosPersonales datosPersonales;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "calificacionesUsers", // nombre de la tabla intermedia
-            joinColumns = @JoinColumn(name = "usuario_id"), // columna que representa a Users
-            inverseJoinColumns = @JoinColumn(name = "calificacionId") // columna que representa a Hoteles
-    )
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     @JsonManagedReference
     private List<Calificaciones> calificaciones;
 

@@ -30,6 +30,10 @@ public class Hoteles {
     @JsonManagedReference
     private List<Habitaciones> habitaciones;
 
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "hotel")
+    @JsonManagedReference
+    private Calificaciones calificacion;
+
     public Hoteles() {}
 
     public Long getId(){
