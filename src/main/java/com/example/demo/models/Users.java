@@ -24,6 +24,10 @@ public class Users {
     @JsonManagedReference
     private List<Calificaciones> calificaciones;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @JsonManagedReference
+    private List<Reservaciones> reservaciones;
+
     public Users() {
     }
 
