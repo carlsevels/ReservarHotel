@@ -1,5 +1,8 @@
 package com.example.demo.models;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
@@ -16,6 +19,14 @@ public class Users {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference
     private DatosPersonales datosPersonales;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "calificacionesUsers", // nombre de la tabla intermedia
+            joinColumns = @JoinColumn(name = "usuario_id"), // columna que representa a Users
+            inverseJoinColumns = @JoinColumn(name = "calificacionId") // columna que representa a Hoteles
+    )
+    @JsonManagedReference
+    private List<Calificaciones> calificaciones;
 
     public Users() {
     }
