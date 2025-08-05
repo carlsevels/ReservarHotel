@@ -14,7 +14,6 @@ public class Hoteles {
     private Long id;
     private String nombre;
     private String descripcion;
-    private Integer capacidad;
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @JsonManagedReference
@@ -59,19 +58,27 @@ public class Hoteles {
         this.descripcion = descripcion;
     }
 
-    public Integer getCapacidad(){
-        return capacidad;
-    }
-
-    public void setCapacidad(Integer capacidad){
-        this.capacidad = capacidad;
-    }
-
     public List<Idiomas> getIdiomas() {
         return idiomas;
     }
 
     public void setIdiomas(List<Idiomas> idiomas){
         this.idiomas = idiomas;
+    }
+
+    public List<Habitaciones> getHabitaciones() {
+        return habitaciones;
+    }
+
+    public void setHabitaciones(List<Habitaciones> habitaciones){
+        this.habitaciones = habitaciones;
+    }
+
+    public List<Servicios> getServicios() {
+        return servicios;
+    }
+
+    public void setServicios(List<Servicios> servicios){
+        this.servicios = servicios;
     }
 }

@@ -35,4 +35,12 @@ public class Descripciones {
     public void setDescripcion(String descripcion){
         this.descripcion = descripcion;
     }
+
+    public Servicios getServicio(){
+        return servicios;
+    }
+
+    public void setServicio(Servicios servicios){
+        this.servicios = servicios;
+    }
 }

@@ -19,7 +19,7 @@ public class Habitaciones {
     private List<Servicios> servicios;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "hotelId")
+    @JoinColumn(name = "hotel_id")
     private Hoteles hotel;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "habitacion")
@@ -70,5 +70,21 @@ public class Habitaciones {
 
     public void setServicios(List<Servicios> servicios){
         this.servicios = servicios;
+    }
+
+    public Hoteles getHotel(){
+        return hotel;
+    }
+
+    public void setHotel(Hoteles hotel){
+        this.hotel = hotel;
+    }
+
+    public List<Galeria> getGaleria(){
+        return galeria;
+    }
+
+    public void setGaleria(List<Galeria> galeria){
+        this.galeria = galeria;
     }
 }

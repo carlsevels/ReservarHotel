@@ -36,4 +36,12 @@ public class Galeria {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+    public Habitaciones getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(Habitaciones habitacion) {
+        this.habitacion = habitacion;
+    }
 }

@@ -13,7 +13,7 @@ public class Idiomas {
     private String nombre;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "hotelId")
+    @JoinColumn(name = "hotel_id")
     @JsonBackReference
     private Hoteles hotel;
 
@@ -33,5 +33,13 @@ public class Idiomas {
 
     public void setNombre(String nombre){
         this.nombre = nombre;
+    }
+
+    public Hoteles getHotel(){
+        return hotel;
+    }
+
+    public void setHotel(Hoteles hotel){
+        this.hotel = hotel;
     }
 }
