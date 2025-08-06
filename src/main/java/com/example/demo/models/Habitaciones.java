@@ -87,4 +87,12 @@ public class Habitaciones {
     public void setGaleria(List<Galeria> galeria){
         this.galeria = galeria;
     }
+
+    public List<Camas> getCamas(){
+        return camas;
+    }
+
+    public void setCamas(List<Camas> camas){
+        this.camas = camas;
+    }
 }

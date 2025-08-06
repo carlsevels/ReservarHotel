@@ -12,11 +12,16 @@ public class HabitacionesDTO {
     @JsonProperty("galeriaDTO")
     public List<GaleriaDTO> galeriaDTO;
 
-    public HabitacionesDTO(String nombre, Integer cantidadPersonas, Long hotelId, List<GaleriaDTO> galeriaDTO) {
+    @JsonProperty("camasDTO")
+    public List<CamasDTO> camasDTO;
+
+    public HabitacionesDTO(String nombre, Integer cantidadPersonas, Long hotelId, List<GaleriaDTO> galeriaDTO,
+            List<CamasDTO> camasDTO) {
         this.nombre = nombre;
         this.cantidadPersonas = cantidadPersonas;
         this.hotelId = hotelId;
         this.galeriaDTO = galeriaDTO;
+        this.camasDTO = camasDTO;
     }
 
     // Getters and Setters
@@ -50,5 +55,13 @@ public class HabitacionesDTO {
 
     public void setGaleriaDTO(List<GaleriaDTO> galeriaDTO) {
         this.galeriaDTO = galeriaDTO;
+    }
+
+    public List<CamasDTO> getCamasDTO() {
+        return camasDTO;
+    }
+
+    public void setCamasDRO(List<CamasDTO> camasDTO) {
+        this.camasDTO = camasDTO;
     }
 }

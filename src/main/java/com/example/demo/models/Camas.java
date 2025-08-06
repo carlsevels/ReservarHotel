@@ -16,26 +16,44 @@ public class Camas {
     private Habitaciones habitacion;
 
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "tipoCamaId")
     @JsonManagedReference
     private TiposCamas tipoCama;
 
     // TODO: Agrega campos aquí
 
-    public Camas() {}
+    public Camas() {
+    }
 
-    public Long getId(){
+    public Long getId() {
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer cantidad(){
+    public Integer getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(Integer cantidad){
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public Habitaciones getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(Habitaciones habitacion) {
+        this.habitacion = habitacion;
+    }
+
+    public TiposCamas getTipoCama() {
+        return tipoCama;
+    }
+
+    public void setTipoCama(TiposCamas tipoCama) {
+        this.tipoCama = tipoCama;
     }
 }
