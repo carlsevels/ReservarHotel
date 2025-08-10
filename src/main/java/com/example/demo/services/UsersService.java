@@ -1,19 +1,19 @@
 package com.example.demo.services;
-
 import java.util.List;
-
 import org.springframework.stereotype.Service;
-
 import com.example.demo.DTO.UsersCreateDTO;
 import com.example.demo.models.DatosPersonales;
 import com.example.demo.models.Users;
+import com.example.demo.repositories.HabitacionesRepository;
+import com.example.demo.repositories.ReservacionesRepository;
 import com.example.demo.repositories.UsersRepository;
 
 @Service
 public class UsersService {
     private final UsersRepository usersRepository;
 
-    public UsersService(UsersRepository usersRepository) {
+    public UsersService(UsersRepository usersRepository, ReservacionesRepository reservacionesRepository,
+            HabitacionesRepository habitacionesRepository) {
         this.usersRepository = usersRepository;
     }
 
@@ -21,6 +21,7 @@ public class UsersService {
         return usersRepository.findAll();
     }
 
+    // Create user
     public Users createUser(UsersCreateDTO dto) {
         Users user = new Users();
         user.setEmail(dto.getEmail());

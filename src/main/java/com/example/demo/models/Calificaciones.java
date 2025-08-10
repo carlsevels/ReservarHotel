@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -31,7 +32,7 @@ public class Calificaciones {
         return id;
     }
 
-    public void getId(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -39,8 +40,23 @@ public class Calificaciones {
         return calificacion;
     }
 
-    public void getCalificacion(Double calificacion) {
+    public void setCalificacion(Double calificacion) {
         this.calificacion = calificacion;
     }
 
+    public Hoteles getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hoteles hotel) {
+        this.hotel = hotel;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
 }

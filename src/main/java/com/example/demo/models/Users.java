@@ -15,7 +15,7 @@ public class Users {
     private Long id;
     private String email;
     private String password;
-
+    
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference
     private DatosPersonales datosPersonales;
@@ -29,6 +29,8 @@ public class Users {
     @JsonManagedReference
     @JsonBackReference
     private List<Reservaciones> reservaciones;
+
+    // TODO: Agrega campos aquí
 
     public Users() {
     }
@@ -66,5 +68,13 @@ public class Users {
         if (datosPersonales != null) {
             datosPersonales.setUsers(this);
         }
+    }
+
+    public List<Reservaciones> getReservaciones() {
+        return reservaciones;
+    }
+
+    public void setReservaciones(List<Reservaciones> reservaciones) {
+        this.reservaciones = reservaciones;
     }
 }

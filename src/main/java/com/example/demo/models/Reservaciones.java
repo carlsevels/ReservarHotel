@@ -1,7 +1,8 @@
 package com.example.demo.models;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,11 +18,13 @@ public class Reservaciones {
     @OneToOne(cascade = CascadeType.ALL)
     @JsonManagedReference
     private Fechas fecha;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JsonManagedReference
+    
+    @ManyToOne
+    @JoinColumn(name = "habitacion_id") // FK en la tabla reservaciones
+    @JsonBackReference
     private Habitaciones habitacion;
-
+    
+    
     // TODO: Agrega campos aquí
 
     public Reservaciones() {
@@ -33,5 +36,29 @@ public class Reservaciones {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Habitaciones getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(Habitaciones habitacion) {
+        this.habitacion = habitacion;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
+    public Fechas getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Fechas fecha) {
+        this.fecha = fecha;
     }
 }

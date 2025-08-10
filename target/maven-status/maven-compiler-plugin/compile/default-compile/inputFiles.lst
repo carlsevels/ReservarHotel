@@ -1,6 +1,8 @@
 /Users/carlosvelez/Desktop/ReservarHotelGitHub/ReservarHotel/src/main/java/com/example/demo/DTO/CamasDTO.java
+/Users/carlosvelez/Desktop/ReservarHotelGitHub/ReservarHotel/src/main/java/com/example/demo/DTO/CreateReservationDTO.java
 /Users/carlosvelez/Desktop/ReservarHotelGitHub/ReservarHotel/src/main/java/com/example/demo/DTO/DatosPersonalesDTO.java
 /Users/carlosvelez/Desktop/ReservarHotelGitHub/ReservarHotel/src/main/java/com/example/demo/DTO/DescripcionesDTO.java
+/Users/carlosvelez/Desktop/ReservarHotelGitHub/ReservarHotel/src/main/java/com/example/demo/DTO/FechasDTO.java
 /Users/carlosvelez/Desktop/ReservarHotelGitHub/ReservarHotel/src/main/java/com/example/demo/DTO/GaleriaDTO.java
 /Users/carlosvelez/Desktop/ReservarHotelGitHub/ReservarHotel/src/main/java/com/example/demo/DTO/HabitacionesDTO.java
 /Users/carlosvelez/Desktop/ReservarHotelGitHub/ReservarHotel/src/main/java/com/example/demo/DTO/HotelesDTO.java

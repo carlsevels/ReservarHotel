@@ -1,9 +1,6 @@
-com/example/demo/controllers/UsersController.class
 com/example/demo/services/DatosPersonalesService.class
 com/example/demo/controllers/DatosPersonalesController.class
 com/example/demo/models/DatosPersonales.class
 com/example/demo/DemoApplication.class
-com/example/demo/repositories/UsersRepository.class
 com/example/demo/models/Users.class
 com/example/demo/repositories/DatosPersonalesRepository.class
-com/example/demo/services/UsersService.class

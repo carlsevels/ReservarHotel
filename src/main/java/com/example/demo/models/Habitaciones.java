@@ -29,11 +29,11 @@ public class Habitaciones {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "habitacion")
     @JsonManagedReference
     private List<Camas> camas;
-
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "habitacion")
+    
+    @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL)
     @JsonManagedReference
-    private Reservaciones reservacion;
-
+    private List<Reservaciones> reservaciones;
+    
 
     // TODO: Agrega campos aquí
 
@@ -64,35 +64,43 @@ public class Habitaciones {
         this.cantidadPersonas = cantidadPersonas;
     }
 
-    public List<Servicios> getServicios(){
+    public List<Servicios> getServicios() {
         return servicios;
     }
 
-    public void setServicios(List<Servicios> servicios){
+    public void setServicios(List<Servicios> servicios) {
         this.servicios = servicios;
     }
 
-    public Hoteles getHotel(){
+    public Hoteles getHotel() {
         return hotel;
     }
 
-    public void setHotel(Hoteles hotel){
+    public void setHotel(Hoteles hotel) {
         this.hotel = hotel;
     }
 
-    public List<Galeria> getGaleria(){
+    public List<Galeria> getGaleria() {
         return galeria;
     }
 
-    public void setGaleria(List<Galeria> galeria){
+    public void setGaleria(List<Galeria> galeria) {
         this.galeria = galeria;
     }
 
-    public List<Camas> getCamas(){
+    public List<Camas> getCamas() {
         return camas;
     }
 
-    public void setCamas(List<Camas> camas){
+    public void setCamas(List<Camas> camas) {
         this.camas = camas;
+    }
+
+    public List<Reservaciones> getReservacion() {
+        return reservaciones;
+    }
+
+    public void setReservacion(List<Reservaciones> reservaciones) {
+        this.reservaciones = reservaciones;
     }
 }

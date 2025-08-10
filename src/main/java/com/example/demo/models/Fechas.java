@@ -47,4 +47,12 @@ public class Fechas {
         this.fechaFin = fechaFin;
     }
 
+    public Reservaciones getReservacion() {
+        return reservaciones;
+    }
+
+    public void setReservacion(Reservaciones reservaciones) {
+        this.reservaciones = reservaciones;
+    }
+
 }

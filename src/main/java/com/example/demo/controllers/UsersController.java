@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+import com.example.demo.DTO.CreateReservationDTO;
 import com.example.demo.DTO.DatosPersonalesDTO;
 import com.example.demo.DTO.UsersCreateDTO;
 import com.example.demo.DTO.UsersDTO;
@@ -63,7 +64,7 @@ public class UsersController {
     }
 
     // Create User
-    @PostMapping
+    @PostMapping("/createUser")
     public ResponseEntity<String> crearUsuario(@RequestBody UsersCreateDTO dto) {
         usersService.createUser(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body("Usuario creado correctamente");
